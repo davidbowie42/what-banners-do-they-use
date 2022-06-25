@@ -1,4 +1,3 @@
-from pexpect import TIMEOUT
 from requests import get
 from models.banner import Banner
 
@@ -6,7 +5,7 @@ from models.banner import Banner
 class Website:
     """A simple model of a website"""
 
-    TIMEOUT = 5
+    __REQUEST_TIMEOUT = 5
 
     def __init__(self, domain: str, url="", html="", banner=Banner.UNKNOWN):
         self.domain = domain
@@ -17,12 +16,12 @@ class Website:
 
     def crawl(self):
         try:
-            response = get("https://" + self.domain, timeout=5)
+            response = get("https://" + self.domain, timeout=self.__REQUEST_TIMEOUT)
             status_code = response.status_code
             html = response.text
         except:
             try:
-                response = get("http://" + self.domain, timeout=5)
+                response = get("http://" + self.domain, timeout=self.__REQUEST_TIMEOUT)
                 status_code = response.status_code
                 html = response.text
             except:

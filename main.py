@@ -34,7 +34,7 @@ def main():
         w.writerow(["Domain", "Banner"])
 
         for site in sites:
-           w.writerow([site.domain, site.banner.name.capitalize()])
+           w.writerow([site.domain, site.banner.name.lower()])
 
 
 

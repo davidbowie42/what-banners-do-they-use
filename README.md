@@ -23,9 +23,9 @@ Executing `python3 main.py` will create a file `output.csv` with the following c
 
 |Domain|Banner|
 |---|---|
-|duckduckgo.com|Unknown|
-|cookiebot.com|Cookiebot|
-|clickskeks.at|Clickskeks|
+|duckduckgo.com|unknown|
+|cookiebot.com|cookiebot|
+|clickskeks.at|clickskeks|
 
 ## State of the project
 
