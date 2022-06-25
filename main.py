@@ -31,8 +31,10 @@ def main():
     with open("output.csv", 'w', encoding='UTF8', newline='') as file:
         w = writer(file)
         
+        w.writerow(["Domain", "Banner"])
+
         for site in sites:
-           w.writerow([site.domain, site.banner.name])
+           w.writerow([site.domain, site.banner.name.capitalize()])
 
 
 
